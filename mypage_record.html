@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Record | TO-DO & TAKE-OFF</title>
+  <title>TO-DO & TAKE-OFF</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Song+Myung&family=Hahmlet&family=Gothic+A1&display=swap" rel="stylesheet">
@@ -21,8 +21,6 @@
     }
 
     body {
-      height: 100%;
-      min-height: 100vh;
       background-color: #f9f9fa;
       color: #333;
       display: flex;
@@ -147,9 +145,11 @@
 
     .content {
       flex: 1;
-      padding: 60px 0;
+      min-height: calc(100vh - 75px);  
+      padding-top: 60px;
+      padding-bottom: 60px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
     }
 
     .container {
@@ -184,9 +184,9 @@
         margin: 0;
     }
 
-        .profile-card #email {
-        margin-top: 10px;
-        margin-bottom: 25px;
+    .profile-card #email {
+      margin-top: 10px;
+      margin-bottom: 25px;
     }
 
     .profile-img {
@@ -288,6 +288,7 @@
       align-items: center;
       justify-content: flex-end;
       padding-right: 4%;
+      margin-top: auto; 
     }
 
     .footer-text {

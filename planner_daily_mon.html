@@ -9,14 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Song+Myung&family=Hahmlet&family=Gothic+A1&display=swap" rel="stylesheet">
 
   <style>
-    html, body {
-      margin: 0; 
+    html {
       height: 100%;
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #F9F9FA;
-      display: flex; 
-      flex-direction: column;
     }
+
+    body {
+      background-color: #f9f9fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
 
     .top-bar {
       position: absolute;
@@ -112,12 +116,25 @@
     }
 
     .content {
-      flex: 1; padding: 40px; text-align: center;
+      flex: 1; 
+      min-height: calc(100vh - 75px);  
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;  
+      gap: 24px;
+      padding: 40px 100px; 
     }
+
     .footer {
-      height: 75px; background: #FFFFFF;
-      display: flex; align-items: center; justify-content: flex-end;
+      height: 75px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       padding-right: 4%;
+      margin-top: auto; 
     }
     .footer-text { font-size: 20px; color: #797878; }
 
@@ -141,15 +158,6 @@
         font-size: 22px;
       }
     }
-
-.content {
-  flex: 1;
-  padding: 40px 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-}
 
 .daily-title {
   color: #4B2840;
