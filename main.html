@@ -510,7 +510,7 @@
 }
 
   
-/* 반응형 웹 개선 미디어 쿼리 */
+/* 반응형 웹 개선 미디어 쿼리 with clamp() and layout fix */
 @media (max-width: 767px) {
   nav {
     padding: 16px !important;
@@ -519,9 +519,10 @@
   }
 
   .top-bar {
-    font-size: 24px !important;
+    font-size: clamp(20px, 5vw, 28px) !important;
     position: static !important;
     margin-bottom: 10px !important;
+    text-align: center;
   }
 
   .nav-links {
@@ -531,10 +532,7 @@
 
   .nav-item {
     padding: 10px 0 !important;
-  }
-
-  body {
-    font-size: 14px !important;
+    width: 100% !important;
   }
 
   .container, .section, main, aside, footer {
@@ -543,9 +541,57 @@
     box-sizing: border-box !important;
   }
 
+  .calendar-day {
+    font-size: clamp(20px, 5vw, 32px) !important;
+  }
+
+  .d-day-text {
+    font-size: clamp(18px, 4vw, 28px) !important;
+  }
+
+  .footer-text {
+    font-size: clamp(12px, 2vw, 16px) !important;
+  }
+
+  .card {
+    padding: 16px !important;
+    font-size: clamp(14px, 3vw, 18px) !important;
+  }
+
+  .title {
+    font-size: clamp(16px, 4vw, 24px) !important;
+  }
+
   img {
     max-width: 100% !important;
     height: auto !important;
+  }
+
+  .input-wrapper,
+  .setting-wrapper,
+  .setting-box,
+  .setting-section {
+    flex-direction: column !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    gap: 12px !important;
+    padding: 10px !important;
+  }
+
+  .setting-title {
+    font-size: clamp(18px, 5vw, 24px) !important;
+  }
+
+  .setting-box input,
+  .setting-box select {
+    width: 100% !important;
+    font-size: clamp(14px, 4vw, 18px) !important;
+  }
+
+  .footer {
+    justify-content: center;
+    padding-right: 0;
+    text-align: center;
   }
 }
 </style>
